@@ -9,8 +9,6 @@ namespace PollinatorBE.Data
             new() {
                 Id = "garden001",
                 UserProfileUid = "user001",
-                PlantId = "plant001",
-                PollinatorId = "poll001",
                 Type = "Vegetable Garden",
                 Region = "Pacific Northwest",
                 Season = "Summer",
@@ -22,8 +20,6 @@ namespace PollinatorBE.Data
             new() {
                 Id = "garden002",
                 UserProfileUid = "user002",
-                PlantId = "plant006",
-                PollinatorId = "poll003",
                 Type = "Pollinator Garden",
                 Region = "Midwest",
                 Season = "Summer",
@@ -35,8 +31,6 @@ namespace PollinatorBE.Data
             new() {
                 Id = "garden003",
                 UserProfileUid = "user003",
-                PlantId = "plant011",
-                PollinatorId = "poll004",
                 Type = "Native Flower Bed",
                 Region = "Southeast",
                 Season = "Spring",
@@ -48,8 +42,6 @@ namespace PollinatorBE.Data
             new() {
                 Id = "garden004",
                 UserProfileUid = "user004",
-                PlantId = "plant016",
-                PollinatorId = "poll006",
                 Type = "Mixed Herb and Flower Garden",
                 Region = "Southwest",
                 Season = "Spring",
