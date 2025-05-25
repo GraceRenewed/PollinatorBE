@@ -10,8 +10,8 @@ namespace PollinatorBE.Interfaces
         // Interfaces can be used in unit testing to mock out the actual implementation.   
         Task<List<UserProfile>> GetUserProfilesAsync();
         Task<UserProfile> GetUserByUidAsync(string uid);
-        Task<UserProfile> CreateUserByUidAsync(UserProfile userProfile);
-        Task<UserProfile> UpdateUserByUidAsync(string uid, UserProfile userProfile);
-        Task<UserProfile> DeleteUserByUidAsync(string uid);
+        Task<UserProfile> CreateUserProfileAsync(UserProfile userProfile);
+        Task<UserProfile> UpdateUserAsync(string uid, UserProfile userProfile);
+        Task<UserProfile> DeleteUserAsync(string uid);
     }
 }
