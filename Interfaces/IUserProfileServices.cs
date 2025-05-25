@@ -9,7 +9,7 @@ namespace PollinatorBE.Interfaces
         // Defines the contract or all the methods that will be inherited by class
         // Makes call to Repository
         // Just method definitions, implementation done in userprofile Service
-        Task<List<UserProfile>> GetUserProfileAsync();
+        Task<List<UserProfile>> GetUserProfilesAsync();
         Task<UserProfile> GetUserByUidAsync(string uid);
         Task<UserProfile> CreateUserByUidAsync(UserProfile userProfile);
         Task<UserProfile> UpdateUserByUidAsync(string uid, UserProfile userProfile);
