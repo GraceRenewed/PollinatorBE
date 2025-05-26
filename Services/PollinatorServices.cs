@@ -17,16 +17,35 @@ namespace PollinatorBE.Services
             return await _pollinatorRepository.GetAllPollinatorsAsync();
         }
 
-        public async Task<List<Pollinator>> GetPollinatorByPlantIdAsync(string plantId)
+        public async Task<List<Pollinator>> GetPollinatorsByPlantIdAsync(string plantId)
         {
             return await _pollinatorRepository.GetPollinatorsByPlantIdAsync(plantId);
         }
 
-    //public async Task<List<Pollinator>> return await
-    // public async Task<Pollinator> return await
-    // public async Task<Pollinator> return await
-    // public async Task<Pollinator> return await
-    // public async Task<Pollinator> return await
+        public async Task<List<Pollinator>> GetPollinatorsByGardenIdAsync(string gardenId)
+        {
+            return await _pollinatorRepository.GetPollinatorsByGardenIdAsync(gardenId);
+        }
+        
+        public async Task<Pollinator> GetPollinatorByIdAsync(string id)
+        {
+            return await _pollinatorRepository.GetPollinatorByIdAsync(id);
+        }
 
-}
+        public async Task<Pollinator> CreatePollinatorAsync(Pollinator pollinator)
+        {
+            return await _pollinatorRepository.CreatePollinatorAsync(pollinator);
+        }
+
+        public async Task<Pollinator> UpdatePollinatorAsync(string id, Pollinator pollinator)
+        {
+            return await _pollinatorRepository.UpdatePollinatorAsync(id, pollinator);
+        }
+
+        public async Task<Pollinator> DeletePollinatorAsync(string id)
+        {
+            return await _pollinatorRepository.DeletePollinatorAsync(id);
+        }
+
+    }
 }
