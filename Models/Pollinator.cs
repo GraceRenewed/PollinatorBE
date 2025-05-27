@@ -10,6 +10,9 @@ namespace PollinatorBE.Models
         public string? UserProfileUid { get; set; }
         public UserProfile? UserProfile { get; set; }
 
+        public string? PlantId {  get; set; }
+        public Plant? Plant { get; set; }
+
         public string? GardenId { get; set; }
         public Garden? Garden { get; set; }
 
