@@ -9,7 +9,6 @@ namespace PollinatorBE.Data
         new () {
             Id = "plant001",
             UserProfileUid = "user001",
-            GardenId = "garden001",
             Name = "Tomato",
             Region = "Pacific Northwest",
             Season = "Summer",
@@ -22,7 +21,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "plant002",
             UserProfileUid = "user001",
-            GardenId = "garden001",
             Name = "Basil",
             Region = "Pacific Northwest",
             Season = "Summer",
@@ -35,7 +33,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "plant_flp001",
             UserProfileUid = "user001",
-            GardenId = "garden001",
             Name = "Bee Balm",
             Region = "Northeast",
             Season = "Summer",
@@ -47,8 +44,7 @@ namespace PollinatorBE.Data
             },
         new() {
             Id = "plant_flp002",
-            UserProfileUid = "user002",
-            GardenId = "garden002",
+            UserProfileUid = "user002",,
             Name = "Milkweed",
             Region = "Midwest",
             Season = "Summer",
@@ -61,7 +57,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "plant_flp003",
             UserProfileUid = "user003",
-            GardenId = "garden003",
             Name = "Coneflower",
             Region = "Southeast",
             Season = "Summer",
@@ -74,7 +69,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "plant_flp004",
             UserProfileUid = "user004",
-            GardenId = "garden004",
             Name = "Black-eyed Susan",
             Region = "Southwest",
             Season = "Summer",

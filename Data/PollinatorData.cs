@@ -9,7 +9,6 @@ namespace PollinatorBE.Data
             new() {
             Id = "poll001",
             UserProfileUid = "user001",
-            GardenId = "garden001",
             Name = "Honey Bee",
             Region = "Pacific Northwest",
             Season = "Spring to Fall",
@@ -20,7 +19,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "poll002",
             UserProfileUid = "user001",
-            GardenId = "garden001",
             Name = "Bumblebee",
             Region = "Pacific Northwest",
             Season = "Spring to Fall",
@@ -31,7 +29,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "poll003",
             UserProfileUid = "user002",
-            GardenId = "garden002",
             Name = "Monarch Butterfly",
             Region = "Midwest",
             Season = "Summer",
@@ -42,7 +39,6 @@ namespace PollinatorBE.Data
         new() {
             Id = "poll004",
             UserProfileUid = "user003",
-            GardenId = "garden003",
             Name = "Painted Lady Butterfly",
             Region = "Southeast",
             Season = "Summer",

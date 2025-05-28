@@ -13,5 +13,24 @@ namespace PollinatorBE.Repositories
         {
             _context = context;
         }
+
+        public async Task<List<Plant>> GetAllPlantsAsync()
+        {
+            return await _context.Plants.ToListAsync();
+        }
+
+        public async Task<List<Plant>> GetPlantsByUserUidAsync(string userProfileUid)
+        {
+            return await _context.Plants
+                .Where(p => p.UserProfileUid == userProfileUid)
+                .ToListAsync();
+        }
+
+        public async Task<List<Plant>> GetPlantsByGardenIdAsync(string gardenId)
+        {
+            return await _context.Plants
+                .Where(g => g.GardenId == gardenId)
+                .ToListAsync();
+        }
     }
 }

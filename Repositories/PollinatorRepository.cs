@@ -18,6 +18,7 @@ namespace PollinatorBE.Repositories
         {
             return await _context.Pollinators.ToListAsync();
         }
+
         public async Task<List<Pollinator>> GetPollinatorsByPlantIdAsync(string plantId)
         {
             return await _context.Pollinators
