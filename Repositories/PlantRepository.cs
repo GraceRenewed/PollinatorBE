@@ -32,5 +32,13 @@ namespace PollinatorBE.Repositories
                 .Where(g => g.GardenId == gardenId)
                 .ToListAsync();
         }
+
+        public async Task<List<Plant>> GetPlantsByPollinatorIdAsync(string pollinatorId)
+        { 
+            return await _context.Plants
+                .Where(r => r.PollinatorId == pollinatorId)
+
+                .ToListAsync();
+        }   
     }
 }

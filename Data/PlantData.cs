@@ -44,7 +44,7 @@ namespace PollinatorBE.Data
             },
         new() {
             Id = "plant_flp002",
-            UserProfileUid = "user002",,
+            UserProfileUid = "user002",
             Name = "Milkweed",
             Region = "Midwest",
             Season = "Summer",
