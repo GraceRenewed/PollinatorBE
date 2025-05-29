@@ -10,8 +10,6 @@ namespace PollinatorBE.Data
         public DbSet<Plant> Plants { get; set; }
         public DbSet<Pollinator> Pollinators { get; set; }
         public DbSet<GardenPlant> GardenPlants { get; set; }
-        public DbSet<GardenPollinator> GardenPollinators { get; set; }
-        public DbSet<PlantPollinator> PlantPollinators { get; set; }
 
         public PollinatorBEDbContext(DbContextOptions<PollinatorBEDbContext> options) : base(options)
         {
@@ -27,7 +25,7 @@ namespace PollinatorBE.Data
 
             // Garden
             modelBuilder.Entity<Garden>()
-                .Haskey(g => g.Id);
+                .HasKey(g => g.Id);
 
             // Plant
             modelBuilder.Entity<Plant>()
