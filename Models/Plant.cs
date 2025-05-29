@@ -27,6 +27,6 @@ namespace PollinatorBE.Models
           
         public Boolean Liked { get; set; }
         public List<Pollinator> Pollinators { get; set; } = new List<Pollinator>();
-        public List<Garden> Gardens { get; set;  } = new List<Garden>();
+        public ICollection<GardenPlant> GardenPlants { get; set; }
     }
 }

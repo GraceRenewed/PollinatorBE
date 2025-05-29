@@ -9,12 +9,15 @@ namespace PollinatorBE.Data
         public DbSet<Garden> Gardens { get; set; }
         public DbSet<Plant> Plants { get; set; }
         public DbSet<Pollinator> Pollinators { get; set; }
+        public DbSet<GardenPlant> GardenPlants { get; set; }
+        public DbSet<GardenPollinator> GardenPollinators { get; set; }
+        public DbSet<PlantPollinator> PlantPollinators { get; set; }
 
         public PollinatorBEDbContext(DbContextOptions<PollinatorBEDbContext> options) : base(options)
         {
         }
-    
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
@@ -24,30 +27,38 @@ namespace PollinatorBE.Data
 
             // Garden
             modelBuilder.Entity<Garden>()
-                .HasMany(r => r.Pollinators)
-                .WithMany(g => g.Gardens);
+                .Haskey(g => g.Id);
 
             // Plant
             modelBuilder.Entity<Plant>()
-                .HasMany(g => g.Gardens)
-                .WithMany(p => p.Plants);
+                .HasKey(p => p.Id);
 
             // Pollinator
             modelBuilder.Entity<Pollinator>()
                 .HasMany(p => p.Plants)
                 .WithMany(r => r.Pollinators);
 
+            modelBuilder.Entity<GardenPlant>()
+                .HasKey(gp => new { gp.GardenId, gp.PlantId });
+
+            modelBuilder.Entity<GardenPlant>()
+                .HasOne(gp => gp.Garden)
+                .WithMany(g => g.GardenPlants)
+                .HasForeignKey(gp => gp.GardenId);
+
+            modelBuilder.Entity<GardenPlant>()
+                .HasOne(gp => gp.Plant)
+                .WithMany(p => p.GardenPlants)
+                .HasForeignKey(gp => gp.PlantId);
+
             // Seed Data
             modelBuilder.Entity<UserProfile>().HasData(UserProfileData.UserProfiles);
             modelBuilder.Entity<Garden>().HasData(GardenData.Gardens);
             modelBuilder.Entity<Plant>().HasData(PlantData.Plants);
             modelBuilder.Entity<Pollinator>().HasData(PollinatorData.Pollinators);
+            modelBuilder.Entity<GardenPlant>().HasData(GardenPlantData.GardenPlants);
 
-           //  modelBuilder.Entity("GardenPollinators").HasData(
-               // new { PollinatorId = 1, GardenId = 1 },
-                // new { PollinatorId = 1, GardenId = 2 },
-                // new { PollinatorId = 2, GardenId = 3 }
-           // );
         }
+
     }
 }
