@@ -17,16 +17,16 @@ namespace PollinatorBE.Services
             return await _gardenRepository.GetAllGardensAsync();
         }
 
-        public async Task<List<Garden>> GetGardenByIdAsync(string id)
+        public async Task<Garden> GetGardenByIdAsync(string id)
         {
             return await _gardenRepository.GetGardenByIdAsync(id);
         }
 
-        public async Task<List<Garden>> GetGardenByUserIdAsync(string userId)
+        public async Task<List<Garden>> GetGardensByUserIdAsync(string userProfileId)
         {
-            return await _gardenRepository.GetGardenByUserIdAsync(userId);
+            return await _gardenRepository.GetGardensByUserIdAsync(userProfileId);
         }
-
+            
         public async Task<Garden> CreateGardenAsync(Garden garden)
         {
             return await _gardenRepository.CreateGardenAsync(garden);
