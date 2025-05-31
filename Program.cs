@@ -41,7 +41,7 @@ builder.Services.AddScoped<IUserProfileRepository, UserProfileRepository>();
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-// builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen();
 
 builder.Services.AddCors(options =>
 {
@@ -57,11 +57,11 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-// if (app.Environment.IsDevelopment())
-// {
- //    app.UseSwagger();
-  //   app.UseSwaggerUI();
-// }
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
 app.UseHttpsRedirection();
 
@@ -71,7 +71,7 @@ app.UseHttpsRedirection();
 // The extension method is used to group related endpoints together.
 // An extension method is a special kind of static method that is used to add new functionality to existing types.
 // A static method is a method that belongs to the class itself, not to instances of the class.
-// app.MapUserProfileEndpoints();
+ app.MapUserProfileEndpoints();
 // app.MapPollinatorEndpoints();
 // app.MapPlantEndpoints();
 // app.MapGardenEndpoints();
