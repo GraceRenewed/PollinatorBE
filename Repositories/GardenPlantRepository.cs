@@ -42,16 +42,16 @@ namespace PollinatorBE.Repositories
             return existingGPlant;
         }
 
-        // public async Task DeleteGardenPlantAsync(string id)
-        // {
-         //   var deleteGPlant = await _context.GardenPlants.FindAsync(id);
-         //   if (deleteGPlant == null)
-         //   {
-         //       return null;
-         //   }
-         //   _context.GardenPlants.Remove(deleteGPlant);
-        //    await _context.SaveChangesAsync();
-         //   return deleteGPlant;
-        // }
+         public async Task<GardenPlant> DeleteGardenPlantAsync(string id)
+         {
+            var deleteGPlant = await _context.GardenPlants.FindAsync(id);
+            if (deleteGPlant == null)
+            {
+                return null;
+            }
+           _context.GardenPlants.Remove(deleteGPlant);
+            await _context.SaveChangesAsync();
+            return deleteGPlant;
+         }
     }
 }
