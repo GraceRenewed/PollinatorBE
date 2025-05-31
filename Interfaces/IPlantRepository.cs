@@ -5,8 +5,7 @@ namespace PollinatorBE.Interfaces
     public interface IPlantRepository
     {
         Task<List<Plant>> GetAllPlantsAsync();
-        Task<List<Plant>> GetPlantsByUserUidAsync(string userUid);
-        Task<List<Plant>> GetPlantsByGardenIdAsync(string gardenId);
+        Task<List<Plant>> GetPlantsByUserUidAsync(string userProfileUid);
         Task<List<Plant>> GetPlantsByPollinatorIdAsync(string pollinatorId);
         Task<Plant> GetPlantByIdAsync(string id);
         Task<Plant> CreatePlantAsync(Plant plant);

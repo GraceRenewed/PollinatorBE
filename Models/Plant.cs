@@ -5,13 +5,10 @@ namespace PollinatorBE.Models
     public class Plant
     {
         [Key]
-        public required string Id {  get; set; }
+        public string Id {  get; set; }
         
         public string? UserProfileUid { get; set; }
         public UserProfile? UserProfile { get; set; }
-
-        public string? GardenId { get; set; }
-        public Garden? Garden { get; set; }
 
         public required string Name {  get; set; }
         public string? Region { get; set; }
@@ -30,5 +27,6 @@ namespace PollinatorBE.Models
           
         public Boolean Liked { get; set; }
         public List<Pollinator> Pollinators { get; set; } = new List<Pollinator>();
+        public ICollection<GardenPlant> GardenPlants { get; set; }
     }
 }

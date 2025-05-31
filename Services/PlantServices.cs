@@ -17,9 +17,9 @@ namespace PollinatorBE.Services
             return await _plantRepository.GetAllPlantsAsync();
         }
 
-        public async Task<List<Plant>> GetPlantsByUserUidAsync(string userUid)
+        public async Task<List<Plant>> GetPlantsByUserUidAsync(string userProfileUid)
         {
-            return await _plantRepository.GetPlantsByUserUidAsync(userUid);
+            return await _plantRepository.GetPlantsByUserUidAsync(userProfileUid);
         }
 
         public async Task<List<Plant>> GetPlantsByGardenIdAsync(string gardenId)

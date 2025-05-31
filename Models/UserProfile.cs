@@ -7,7 +7,7 @@ namespace PollinatorBE.Models
     public class UserProfile
     {
         [Key]
-        public required string Uid { get; set; }
+        public string Uid { get; set; }
         
         [Required]
         [StringLength(50, ErrorMessage = "Customer user name cannot be longer than 50 characters")]

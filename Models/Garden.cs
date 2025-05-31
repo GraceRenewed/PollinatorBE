@@ -5,7 +5,7 @@ namespace PollinatorBE.Models
     public class Garden
     {
         [Key]
-        public required string Id { get; set; }
+        public string Id { get; set; }
 
         public string? UserProfileUid { get; set; }
         public UserProfile? UserProfile { get; set; }
@@ -19,7 +19,7 @@ namespace PollinatorBE.Models
         public string? Notes { get; set; }
         public string? Sun { get; set; }
 
-        public List<Plant> Plants { get; set; } = new List<Plant>();
-        public List<Pollinator> Pollinators { get; set; } = new List<Pollinator>();
+        public ICollection<GardenPlant> GardenPlants { get; set; } 
+        public List<Pollinator> Pollinators { get; set;  } = new List<Pollinator>();
     }
 }

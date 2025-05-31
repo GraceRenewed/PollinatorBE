@@ -10,8 +10,8 @@ namespace PollinatorBE.Models
         public string? UserProfileUid { get; set; }
         public UserProfile? UserProfile { get; set; }
 
-        public string? GardenId { get; set; }
-        public Garden? Garden { get; set; }
+        public string? PlantId {  get; set; }
+        public Plant? Plant { get; set; }
 
         [Required]
         public required string Name { get; set; }
@@ -24,5 +24,6 @@ namespace PollinatorBE.Models
         public string? Image { get; set; }
         public Boolean Liked { get; set; }
         public List<Plant> Plants { get; set; } = new List<Plant>();
+        public List<Garden> Gardens { get; set; } = new List<Garden>();
     }
 }
