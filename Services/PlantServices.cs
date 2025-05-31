@@ -22,11 +22,6 @@ namespace PollinatorBE.Services
             return await _plantRepository.GetPlantsByUserUidAsync(userProfileUid);
         }
 
-        public async Task<List<Plant>> GetPlantsByGardenIdAsync(string gardenId)
-        {
-            return await _plantRepository.GetPlantsByGardenIdAsync(gardenId);
-        }
-
         public async Task<List<Plant>> GetPlantsByPollinatorIdAsync(string pollinatorId)
         {
             return await _plantRepository.GetPlantsByPollinatorIdAsync(pollinatorId);
