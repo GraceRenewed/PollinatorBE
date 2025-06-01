@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Builder;
-using PollinatorBE.Interfaces;
+﻿using PollinatorBE.Interfaces;
 using PollinatorBE.Models;
 using PollinatorBE.Services;
+
 
 namespace PollinatorBE.Endpoints
 {
@@ -21,20 +21,20 @@ namespace PollinatorBE.Endpoints
                 .Produces<List<UserProfile>>(StatusCodes.Status200OK);
 
             // Get User by User Uid
-            group.MapGet("/{uid}", async (string uid, IUserProfileServices userProfileServices) =>
+            group.MapGet("/{uid}", async (IUserProfileServices userProfileServices, string uid) =>
                 {
                 var result = await userProfileServices.GetUserByUidAsync(uid);
-                return result is not null ? Results.Ok(result) : Results.NotFound();
+                    return Results.Ok(result);
                 })
                 .WithName("GetUsersByUid")
                 .WithOpenApi()
-                .Produces(StatusCodes.Status404NotFound);
+                .Produces<UserProfile>(StatusCodes.Status200OK);
 
             // Create User Profile
-            group.MapPost("/", async (UserProfile userProfile, IUserProfileServices userProfileServices) =>
+            group.MapPost("/", async (IUserProfileServices userProfileServices, UserProfile userProfile) =>
             {
                 var createUser = await userProfileServices.CreateUserProfileAsync(userProfile);
-                return createUser is not null ? Results.Created($"/userProfiles/{createUser.Uid}", createUser) : Results.BadRequest();
+                return createUser is not null ? Results.Created($"/api/UserProfile/{createUser.Uid}", createUser);
             })
                 .WithName("CreateUserProfile")
                 .WithOpenApi()
@@ -42,25 +42,25 @@ namespace PollinatorBE.Endpoints
                 .Produces(StatusCodes.Status400BadRequest);
 
             // Update User Profile
-            group.MapPut("/{uid}", async (string uid, UserProfile userProfile, IUserProfileServices userProfileServices) =>
+            group.MapPut("/{uid}", async (IUserProfileServices userProfileServices, string uid, UserProfile userProfile) =>
             {
                 var updatedUser = await userProfileServices.UpdateUserAsync(uid, userProfile);
-                return updatedUser is not null ? Results.Ok(updatedUser) : Results.NotFound();
+                return Results.Ok(updatedUser);
             })
                 .WithName("UpdateUser")
                 .WithOpenApi()
                 .Produces<UserProfile>(StatusCodes.Status200OK)
-                .Produces(StatusCodes.Status404NotFound);
+                .Produces(StatusCodes.Status204NoContent);
 
             group.MapDelete("/{uid}", async (string uid, IUserProfileServices userProfileServices) =>
             {
                 var deleteUser = await userProfileServices.DeleteUserAsync(uid);
-                return deleteUser is not null ? Results.Ok(deleteUser) : Results.NotFound();
+                return Results.NoContent();
             })
                 .WithName("DeleteUser")
                 .WithOpenApi()
-                .Produces<UserProfile>(StatusCodes.Status200OK)
-                .Produces(StatusCodes.Status404NotFound);
+                .Produces<UserProfile>(StatusCodes.Status204NoContent);
+                
         }
     }
 }
