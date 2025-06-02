@@ -7,6 +7,10 @@ using PollinatorBE.Repositories;
 using PollinatorBE.Services;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http.Json;
+using Microsoft.AspNetCore.OpenApi;
+using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 // Add configuration to read from user secrets when in development
@@ -71,10 +75,10 @@ app.UseHttpsRedirection();
 // The extension method is used to group related endpoints together.
 // An extension method is a special kind of static method that is used to add new functionality to existing types.
 // A static method is a method that belongs to the class itself, not to instances of the class.
- app.MapUserProfileEndpoints();
-// app.MapPollinatorEndpoints();
-// app.MapPlantEndpoints();
-// app.MapGardenEndpoints();
-// app.MapGardenPlantEndpoints();
+app.MapUserProfileEndpoints();
+app.MapPollinatorEndpoints();
+app.MapPlantEndpoints();
+app.MapGardenEndpoints();
+app.MapGardenPlantEndpoints();
 
 app.Run();

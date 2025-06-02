@@ -23,7 +23,7 @@ namespace PollinatorBE.Models
         public required string Description { get; set; }
         public string? Image { get; set; }
         public Boolean Liked { get; set; }
-        public List<Plant> Plants { get; set; } = new List<Plant>();
+        public ICollection<Plant> Plants { get; set; } = new List<Plant>();
         public List<Garden> Gardens { get; set; } = new List<Garden>();
     }
 }
