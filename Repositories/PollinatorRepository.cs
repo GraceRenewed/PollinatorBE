@@ -22,7 +22,7 @@ namespace PollinatorBE.Repositories
         public async Task<List<Pollinator>> GetPollinatorsByPlantIdAsync(string plantId)
         {
             return await _context.Pollinators
-                .Where(p =>p.PlantId == plantId)
+                .Where(p =>p.Plants.Any(pl => pl.Id == plantId))
                 .ToListAsync();
         }
 

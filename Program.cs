@@ -13,14 +13,17 @@ using Swashbuckle.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
-// Add configuration to read from user secrets when in development
-if (builder.Environment.IsDevelopment())
-{
-    builder.Configuration.AddUserSecrets<Program>();
-}
 
-var connectionString = builder.Configuration.GetConnectionString("PollinatorBEDbConnection");
-builder.Services.AddDbContext<PollinatorBEDbContext>(options => options.UseNpgsql(connectionString));
+AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
+
+// Add configuration to read from user secrets when in development
+builder.Services.AddNpgsql<PollinatorBEDbContext>(builder.Configuration["PollinatorBEConnectionString"]);
+
+builder.Services.Configure<JsonOptions>(options =>
+{
+    options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+});
+
 
 // Here we are registering the services and repositories with the DI container.
 // The DI container will inject the services and repositories into the endpoints (controllers).
