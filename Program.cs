@@ -1,15 +1,11 @@
-using PollinatorBE.Models;
 using Microsoft.EntityFrameworkCore;
 using PollinatorBE.Data;
 using PollinatorBE.Endpoints;
 using PollinatorBE.Interfaces;
 using PollinatorBE.Repositories;
 using PollinatorBE.Services;
-using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Http.Json;
-using Microsoft.AspNetCore.OpenApi;
-using Microsoft.Extensions.DependencyInjection;
-using Swashbuckle.AspNetCore;
+using System.Text.Json.Serialization;
 
 
 var builder = WebApplication.CreateBuilder(args);
