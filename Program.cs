@@ -6,20 +6,24 @@ using PollinatorBE.Repositories;
 using PollinatorBE.Services;
 using Microsoft.AspNetCore.Http.Json;
 using System.Text.Json.Serialization;
+using Microsoft.AspNetCore.OpenApi;
+using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore;
 
 
 var builder = WebApplication.CreateBuilder(args);
-
-AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
-
 // Add configuration to read from user secrets when in development
-builder.Services.AddNpgsql<PollinatorBEDbContext>(builder.Configuration["PollinatorBEConnectionString"]);
-
-builder.Services.Configure<JsonOptions>(options =>
+if (builder.Environment.IsDevelopment())
 {
-    options.SerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
-});
+    builder.Configuration.AddUserSecrets<Program>();
+}
 
+var connectionString = builder.Configuration.GetConnectionString("PollinatorBEDbConnection");
+if (string.IsNullOrEmpty(connectionString))
+{
+    throw new InvalidOperationException("Database connection string 'PollinatorBEDbConnection' is missing or empty.");
+}
+builder.Services.AddDbContext<PollinatorBEDbContext>(options => options.UseNpgsql(connectionString));
 
 // Here we are registering the services and repositories with the DI container.
 // The DI container will inject the services and repositories into the endpoints (controllers).
