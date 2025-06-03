@@ -19,7 +19,7 @@ namespace PollinatorBE.Models
         public string? Notes { get; set; }
         public string? Sun { get; set; }
 
-        public ICollection<GardenPlant> GardenPlants { get; set; } 
-        public List<Pollinator> Pollinators { get; set;  } = new List<Pollinator>();
+        public ICollection<GardenPlant> GardenPlants { get; set; } = new List<GardenPlant>();
+        public ICollection<Pollinator> Pollinators { get; set; } = new List<Pollinator>();
     }
 }

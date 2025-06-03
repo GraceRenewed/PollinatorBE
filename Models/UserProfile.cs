@@ -1,6 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Net.NetworkInformation;
-using System.Numerics;
 
 namespace PollinatorBE.Models
 {
@@ -19,8 +17,6 @@ namespace PollinatorBE.Models
         
         public string? Image {  get; set; }
         public string? Region { get; set; }
-        public List<Plant> Plants { get; set; } = new List<Plant>();
         public List<Garden> Gardens { get; set; } = new List<Garden>();
-        public List<Pollinator> Pollinators { get; set; } = new List<Pollinator>();
     }
 }

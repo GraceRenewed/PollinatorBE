@@ -7,11 +7,13 @@ namespace PollinatorBE.Models
         [Key]
         public required string Id { get; set; }
 
-        public required string GardenId { get; set; }
-        public required Garden Garden { get; set; }
+        [Required]
+        public string GardenId { get; set; }
+        public Garden? Garden { get; set; }
 
-        public required string PlantId { get; set; }
-        public required Plant Plant { get; set; }
+        [Required]
+        public string PlantId { get; set; }
+        public Plant? Plant { get; set; }
 
         public string? UserProfileUid { get; set; }
         public UserProfile? UserProfile { get; set; }

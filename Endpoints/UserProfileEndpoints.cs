@@ -1,7 +1,5 @@
 ﻿using PollinatorBE.Interfaces;
 using PollinatorBE.Models;
-using PollinatorBE.Services;
-
 
 namespace PollinatorBE.Endpoints
 {
@@ -34,7 +32,7 @@ namespace PollinatorBE.Endpoints
             group.MapPost("/", async (IUserProfileServices userProfileServices, UserProfile userProfile) =>
             {
                 var createUser = await userProfileServices.CreateUserProfileAsync(userProfile);
-                return createUser is not null ? Results.Created($"/api/UserProfile/{createUser.Uid}", createUser);
+                return Results.Created($"/api/UserProfile/{createUser.Uid}", createUser);
             })
                 .WithName("CreateUserProfile")
                 .WithOpenApi()
