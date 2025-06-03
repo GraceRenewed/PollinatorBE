@@ -11,7 +11,7 @@ namespace PollinatorBE.Interfaces
         Task<List<UserProfile>> GetUserProfilesAsync();
         Task<UserProfile> GetUserByUidAsync(string uid);
         Task<UserProfile> CreateUserProfileAsync(UserProfile userProfile);
-        Task<UserProfile> UpdateUserAsync(string uid, UserProfile userProfile);
+        Task<UserProfile?> UpdateUserAsync(string uid, UserProfile userProfile);
         Task<UserProfile> DeleteUserAsync(string uid);
     }
 }

@@ -37,12 +37,12 @@ namespace PollinatorBE.Services
             return await _pollinatorRepository.CreatePollinatorAsync(pollinator);
         }
 
-        public async Task<Pollinator> UpdatePollinatorAsync(string id, Pollinator pollinator)
+        public async Task<Pollinator?> UpdatePollinatorAsync(string id, Pollinator pollinator)
         {
             return await _pollinatorRepository.UpdatePollinatorAsync(id, pollinator);
         }
 
-        public async Task<Pollinator> DeletePollinatorAsync(string id)
+        public async Task<Pollinator?> DeletePollinatorAsync(string id)
         {
             return await _pollinatorRepository.DeletePollinatorAsync(id);
         }

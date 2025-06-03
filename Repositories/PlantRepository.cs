@@ -45,24 +45,24 @@ namespace PollinatorBE.Repositories
             return result.Entity;
         }
 
-        public async Task<Plant> UpdatePlantAsync(string id, Plant plant)
+        public async Task<Plant?> UpdatePlantAsync(string id, Plant plant)
         {
             var existingPlant = await _context.Plants.FindAsync(id);
             if (existingPlant == null) return null;
             existingPlant.Name = plant.Name;
-            existingPlant.UserProfileUid = existingPlant.UserProfileUid;
-            existingPlant.Region = existingPlant.Region;
-            existingPlant.Season = existingPlant.Season;
-            existingPlant.Type = existingPlant.Type;
-            existingPlant.Description = existingPlant.Description;
-            existingPlant.Picture = existingPlant.Picture;
-            existingPlant.Sun = existingPlant.Sun;
-            existingPlant.Liked = existingPlant.Liked;
+            existingPlant.UserProfileUid = plant.UserProfileUid;
+            existingPlant.Region = plant.Region;
+            existingPlant.Season = plant.Season;
+            existingPlant.Type = plant.Type;
+            existingPlant.Description = plant.Description;
+            existingPlant.Picture = plant.Picture;
+            existingPlant.Sun = plant.Sun;
+            existingPlant.Liked = plant.Liked;
             await _context.SaveChangesAsync();
             return existingPlant;
         }
 
-        public async Task<Plant> DeletePlantAsync(string id)
+        public async Task<Plant?> DeletePlantAsync(string id)
         {
             var deletePlant = await _context.Plants.FindAsync(id);
             if (deletePlant == null)

@@ -5,7 +5,7 @@ namespace PollinatorBE.Models
     public class Plant
     {
         [Key]
-        public string Id {  get; set; }
+        public required string Id {  get; set; }
         
         public string? UserProfileUid { get; set; }
         public UserProfile? UserProfile { get; set; }

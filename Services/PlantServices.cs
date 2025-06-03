@@ -37,12 +37,12 @@ namespace PollinatorBE.Services
             return await _plantRepository.CreatePlantAsync(plant);
         }
 
-        public async Task<Plant> UpdatePlantAsync(string id, Plant plant)
+        public async Task<Plant?> UpdatePlantAsync(string id, Plant plant)
         {
             return await _plantRepository.UpdatePlantAsync(id, plant);
         }
 
-        public async Task<Plant> DeletePlantAsync(string id)
+        public async Task<Plant?> DeletePlantAsync(string id)
         {
             return await _plantRepository.DeletePlantAsync(id);
         }

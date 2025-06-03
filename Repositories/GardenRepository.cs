@@ -38,7 +38,7 @@ namespace PollinatorBE.Repositories
             return gResult.Entity;
         }
 
-        public async Task<Garden> UpdateGardenAsync(string id, Garden garden)
+        public async Task<Garden?> UpdateGardenAsync(string id, Garden garden)
         {
             var existingGarden = await _context.Gardens.FindAsync(id);
             if (existingGarden == null) 

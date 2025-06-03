@@ -37,7 +37,10 @@ namespace PollinatorBE.Data
                 .WithMany(r => r.Pollinators);
 
             modelBuilder.Entity<GardenPlant>()
-                .HasKey(gp => new { gp.GardenId, gp.PlantId });
+                .HasKey(gp => gp.Id);
+
+            modelBuilder.Entity<GardenPlant>()
+                .HasIndex(gp => new { gp.GardenId, gp.PlantId }).IsUnique();
 
             modelBuilder.Entity<GardenPlant>()
                 .HasOne(gp => gp.Garden)
