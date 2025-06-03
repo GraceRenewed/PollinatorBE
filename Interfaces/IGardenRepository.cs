@@ -8,7 +8,7 @@ namespace PollinatorBE.Interfaces
         Task<Garden> GetGardenByIdAsync(string id);
         Task<List<Garden>> GetGardensByUserIdAsync(string userProfileUid);
         Task<Garden> CreateGardenAsync(Garden garden);
-        Task<Garden> UpdateGardenAsync(string id, Garden garden);
+        Task<Garden?> UpdateGardenAsync(string id, Garden garden);
         Task<Garden> DeleteGardenAsync(string id);
     }
 }

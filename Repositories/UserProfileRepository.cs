@@ -31,7 +31,7 @@ namespace PollinatorBE.Repositories
             return userProfile;
         }
 
-        public async Task<UserProfile> UpdateUserAsync(string uid, UserProfile userProfile)
+        public async Task<UserProfile?> UpdateUserAsync(string uid, UserProfile userProfile)
         {
             var existingUserProfile = await _context.UserProfiles.FindAsync(uid);
             if (existingUserProfile == null)

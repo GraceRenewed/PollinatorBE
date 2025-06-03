@@ -29,9 +29,9 @@ namespace PollinatorBE.Endpoints
                 .Produces<Garden>(StatusCodes.Status200OK);
 
             // Get Gardens by User Uid
-            group.MapGet("/UserUid/{userUid}", async (IGardenServices gardenServices, string uid) =>
+            group.MapGet("/UserUid/{userUid}", async (IGardenServices gardenServices, string userUid) =>
             {
-                var userGardens = await gardenServices.GetGardensByUserIdAsync(uid);
+                var userGardens = await gardenServices.GetGardensByUserIdAsync(userUid);
                 return Results.Ok(userGardens);
             })
                 .WithName("GetGardensByUserUid")

@@ -43,12 +43,12 @@ namespace PollinatorBE.Services
             return await _userProfileRepository.CreateUserProfileAsync(userProfile);
         }
 
-        public async Task<UserProfile> UpdateUserAsync(string uid, UserProfile userProfile)
+        public async Task<UserProfile?> UpdateUserAsync(string uid, UserProfile userProfile)
         {
             return await _userProfileRepository.UpdateUserAsync(uid, userProfile);
         }
 
-        public async Task<UserProfile> DeleteUserAsync(string uid)
+        public async Task<UserProfile?> DeleteUserAsync(string uid)
         {
             return await _userProfileRepository.DeleteUserAsync(uid);
         }

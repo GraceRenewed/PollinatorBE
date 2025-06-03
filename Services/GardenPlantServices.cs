@@ -17,9 +17,9 @@ namespace PollinatorBE.Services
             return await _gardenPlantRepository.GetGardenPlantsAsync();
         }
 
-        public async Task<GardenPlant> GetGardenPlantsByIdAsync(string id)
+        public async Task<List<GardenPlant>> GetGardenPlantsByIdAsync(string gardenId)
         {
-            return await _gardenPlantRepository.GetGardenPlantsByIdAsync(id);
+            return await _gardenPlantRepository.GetGardenPlantsByIdAsync(gardenId);
         }
 
         public async Task<GardenPlant> CreateGardenPlantsAsync(GardenPlant gardenPlant)
@@ -27,12 +27,12 @@ namespace PollinatorBE.Services
             return await _gardenPlantRepository.CreateGardenPlantsAsync(gardenPlant);
         }
 
-        public async Task<GardenPlant> UpdateGardenPlantAsync(string id, GardenPlant gardenPlant)
+        public async Task<GardenPlant?> UpdateGardenPlantAsync(string id, GardenPlant gardenPlant)
         {
             return await _gardenPlantRepository.UpdateGardenPlantAsync(id, gardenPlant);
         }
 
-        public async Task<GardenPlant> DeleteGardenPlantAsync(string id)
+        public async Task<GardenPlant?> DeleteGardenPlantAsync(string id)
         {
             return await _gardenPlantRepository.DeleteGardenPlantAsync(id);
         }

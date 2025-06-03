@@ -9,7 +9,7 @@ namespace PollinatorBE.Interfaces
         Task<List<Pollinator>> GetPollinatorsByGardenIdAsync(string gardenId);
         Task<Pollinator> GetPollinatorByIdAsync(string id);
         Task<Pollinator> CreatePollinatorAsync(Pollinator pollinator);
-        Task<Pollinator> UpdatePollinatorAsync(string id, Pollinator pollinator);
+        Task<Pollinator?> UpdatePollinatorAsync(string id, Pollinator pollinator);
         Task<Pollinator> DeletePollinatorAsync(string id);
     }
 }

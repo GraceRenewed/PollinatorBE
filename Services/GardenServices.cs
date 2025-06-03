@@ -31,12 +31,12 @@ namespace PollinatorBE.Services
         {
             return await _gardenRepository.CreateGardenAsync(garden);
         }
-        public async Task<Garden> UpdateGardenAsync(string id, Garden garden)
+        public async Task<Garden?> UpdateGardenAsync(string id, Garden garden)
         {
             return await _gardenRepository.UpdateGardenAsync(id, garden);
         }
 
-        public async Task<Garden> DeleteGardenAsync(string id)
+        public async Task<Garden?> DeleteGardenAsync(string id)
         {
             return await _gardenRepository.DeleteGardenAsync(id);
         }

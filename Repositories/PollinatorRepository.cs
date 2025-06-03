@@ -45,10 +45,11 @@ namespace PollinatorBE.Repositories
             return result.Entity;
         }
 
-        public async Task<Pollinator> UpdatePollinatorAsync(string id, Pollinator pollinator)
+        public async Task<Pollinator?> UpdatePollinatorAsync(string id, Pollinator pollinator)
         {
             var existingPollinator = await _context.Pollinators.FindAsync(id);
             if (existingPollinator == null) return null;
+            existingPollinator.UserProfileUid = pollinator.UserProfileUid;
             existingPollinator.Name = pollinator.Name;
             existingPollinator.Region = pollinator.Region;
             existingPollinator.Season = pollinator.Season;

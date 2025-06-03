@@ -19,9 +19,11 @@ namespace PollinatorBE.Repositories
             return await _context.GardenPlants.ToListAsync();
         }
 
-        public async Task<GardenPlant> GetGardenPlantsByIdAsync(string id)
+        public async Task<List<GardenPlant>> GetGardenPlantsByIdAsync(string gardenId)
         {
-            return await _context.GardenPlants.FindAsync(id);
+            return await _context.GardenPlants
+                .Where(gp => gp.GardenId == gardenId) 
+                .ToListAsync();
         }
 
         public async Task<GardenPlant> CreateGardenPlantsAsync(GardenPlant gardenPlant)
@@ -31,13 +33,13 @@ namespace PollinatorBE.Repositories
             return gpResult.Entity;
         }
 
-        public async Task<GardenPlant> UpdateGardenPlantAsync(string id, GardenPlant gardenPlant)
+        public async Task<GardenPlant?> UpdateGardenPlantAsync(string id, GardenPlant gardenPlant)
         {
             var existingGPlant = await _context.GardenPlants.FindAsync(id);
             if (existingGPlant == null) return null;
-            existingGPlant.GardenId = existingGPlant.GardenId;
-            existingGPlant.PlantId = existingGPlant.PlantId;
-            existingGPlant.UserProfileUid = existingGPlant.UserProfileUid;
+            existingGPlant.GardenId = gardenPlant.GardenId;
+            existingGPlant.PlantId = gardenPlant.PlantId;
+            existingGPlant.UserProfileUid = gardenPlant.UserProfileUid;
             await _context.SaveChangesAsync();
             return existingGPlant;
         }
