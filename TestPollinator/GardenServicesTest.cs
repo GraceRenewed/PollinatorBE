@@ -15,8 +15,8 @@ namespace PollinatorBE.TestPollinator
             var mockRepo = new Mock<IGardenRepository>();
             var expectedGardens = new List<Garden>
             {
-                new Garden { Id = "1", Type = "Flower" },
-                new Garden { Id = "2", Type = "Flower Pot" }
+                new Garden { Id = "garden201", Type = "Flower" },
+                new Garden { Id = "garden202", Type = "Flower Pot" }
             };
             mockRepo.Setup(repo => repo.GetAllGardensAsync()).ReturnsAsync(expectedGardens);
 
@@ -40,12 +40,12 @@ namespace PollinatorBE.TestPollinator
                 Id = "garden201",
                 Type = "Raised",
             };
-            mockRepo.Setup(repo => repo.GetGardenByIdAsync("1")).ReturnsAsync(expectedGarden);
+            mockRepo.Setup(repo => repo.GetGardenByIdAsync("garden201")).ReturnsAsync(expectedGarden);
 
             var service = new GardenServices(mockRepo.Object);
 
             // Act
-            var result = await service.GetGardenByIdAsync("1");
+            var result = await service.GetGardenByIdAsync("garden201");
 
             // Assert
             Assert.NotNull(result);
@@ -59,8 +59,8 @@ namespace PollinatorBE.TestPollinator
             var mockRepo = new Mock<IGardenRepository>();
             var expectedGardens = new List<Garden>
             {
-                new Garden { Id = "1", Type = "Pot" },
-                new Garden { Id = "2", Type = "Flower" }
+                new Garden { Id = "garden201", Type = "Pot", UserProfileUid = "user201" },
+                new Garden { Id = "garden202", Type = "Flower", UserProfileUid = "user202" }
             };
             mockRepo.Setup(repo => repo.GetGardensByUserIdAsync("user201"))
                 .ReturnsAsync(expectedGardens);
