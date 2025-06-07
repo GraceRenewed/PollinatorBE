@@ -85,7 +85,7 @@ dotnet test
 Check appsettings.json for any required configuration (like connection strings) and update as needed.
 
 <h2 id="apiCalls">📫 API Documentation</h2>
-[Postman Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
+- [Postman Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
 
 <h2 id="contribute">📫 Contribute</h2>
 
