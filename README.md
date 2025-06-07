@@ -38,6 +38,7 @@
 - System.ComponentModel.DataAnnotations 
 - JSON configuration 
 - Postman
+- PostgreSQL(PgAdmin)
 
 <h2 id="started">🚀 Getting started</h2>
 
@@ -49,6 +50,7 @@ What you need to do to run PollinatorBE project locally
 - [.NET 9 SDK](https://dotnet.microsoft.com./en-us/)
 - [Git](https://git-scm.com/)
 - [Visual Studio 2022/2025](https://visualstudio.microsoft.com/) (or later) with .NET desktop and ASP.NET workloads
+- [PgAdmin](https://www.postgresql.org/download/)
 
 <h3>Cloning</h3>
 
