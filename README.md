@@ -11,10 +11,16 @@
 
 <p align="center">Pollinator populations are decreasing and many people want to help. This app will give people the tools they need to support them. This repository includes all the backend connections, calls, and unit tests for the application.</p>
 
+<h2 id="feature"> Features</h2>  
+
+This application gives users the ability to create gardens based on pollinators that they would like to help and attract. It enables people create their own garden by selecting plants they would like to include in their garden. They are able to select pollinators and view the types of plants that they are attracted to. It gives the user full CRUD on their User Profile, Garden, Plants, and Pollinators and the ability to Crud on their specific garden by the addition of a join table between Gardens and Plants.
 
 <p align="center">
 <a href="https://github.com/ShaanCoding"> Visit this Project</a>
 </p>
+
+<h2 id="depolyment"> Depolyed Project</h2>
+Click here to be taken to project
 
 <h2 id="layout"> Layout</h2>
 
@@ -85,7 +91,13 @@ dotnet test
 Check appsettings.json for any required configuration (like connection strings) and update as needed.
 
 <h2 id="apiCalls">📫 Endpoints</h2>
-- [API Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
+
+ [API Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
+ [Postman Video](loom link here)
+
+<h2 id="projboard"> Project Board</h2>
+
+[GitHub Project Board](https://github.com/users/GraceRenewed/projects/6)
 
 <h2 id="contribute">📫 Contribute</h2>
 
