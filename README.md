@@ -97,6 +97,10 @@ Check appsettings.json for any required configuration (like connection strings) 
  
  [Postman Video](https://www.loom.com/share/06bfa7c84f404f33a13ea060cf5a32df?sid=c9baaada-5ae9-4827-b361-40c717fad7a8)
 
+ <h2 id="unitTest"> Unit Tests</h2>
+
+[Video of tests](https://www.loom.com/share/26787eeada0740898c75a50bed275fae?sid=0c375c07-312d-4397-b9dc-655ac45ed5ee)
+
 <h2 id="projboard"> Project Board</h2>
 
 [GitHub Project Board](https://github.com/users/GraceRenewed/projects/6)
