@@ -17,6 +17,7 @@ This application gives users the ability to create gardens based on pollinators 
 
 <p align="center">
 <a href="https://github.com/ShaanCoding"> Visit this Project</a>
+<a href="https://docs.google.com/presentation/d/16FfCE0A8rwL9ZbVFrgeazzTcfgQc6p0My5CoAg6qO0A/edit?usp=sharing"> Project Slide Presentation
 </p>
 
 <h2 id="depolyment"> Depolyed Project</h2>
