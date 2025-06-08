@@ -94,7 +94,8 @@ Check appsettings.json for any required configuration (like connection strings) 
 <h2 id="apiCalls">📫 Endpoints</h2>
 
  [API Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
- [Postman Video](loom link here)
+ 
+ [Postman Video](https://www.loom.com/share/06bfa7c84f404f33a13ea060cf5a32df?sid=c9baaada-5ae9-4827-b361-40c717fad7a8)
 
 <h2 id="projboard"> Project Board</h2>
 
