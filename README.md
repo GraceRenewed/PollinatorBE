@@ -94,10 +94,6 @@ dotnet test
 - Tip:
 Check appsettings.json for any required configuration (like connection strings) and update as needed.
 
-<h2 id="apiCalls">📫 Endpoints</h2>
- 
-
-
  <h2 id="unitTest"> Unit Tests</h2>
 
 [Video of tests](https://www.loom.com/share/26787eeada0740898c75a50bed275fae?sid=0c375c07-312d-4397-b9dc-655ac45ed5ee)
