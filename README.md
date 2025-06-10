@@ -16,9 +16,7 @@
 This application gives users the ability to create gardens based on pollinators that they would like to help and attract. It enables people create their own garden by selecting plants they would like to include in their garden. They are able to select pollinators and view the types of plants that they are attracted to. It gives the user full CRUD on their User Profile, Garden, Plants, and Pollinators and the ability to Crud on their specific garden by the addition of a join table between Gardens and Plants.
 
 <p align="center">
- 
 <a href="https://github.com/GraceRenewed/PollinatorBE/"> Visit this Project</a>
- 
 <a href="https://docs.google.com/presentation/d/16FfCE0A8rwL9ZbVFrgeazzTcfgQc6p0My5CoAg6qO0A/edit?usp=sharing"> Project Slide Presentation
 </p>
 
