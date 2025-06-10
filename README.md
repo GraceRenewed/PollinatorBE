@@ -116,6 +116,7 @@ Check appsettings.json for any required configuration (like connection strings) 
 </sub>
 </a>
 </td>
+</table>
 
 <h2 id="contribute">📫 Contribute</h2>
 
