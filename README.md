@@ -16,20 +16,23 @@
 This application gives users the ability to create gardens based on pollinators that they would like to help and attract. It enables people create their own garden by selecting plants they would like to include in their garden. They are able to select pollinators and view the types of plants that they are attracted to. It gives the user full CRUD on their User Profile, Garden, Plants, and Pollinators and the ability to Crud on their specific garden by the addition of a join table between Gardens and Plants.
 
 <p align="center">
-<a href="https://github.com/ShaanCoding"> Visit this Project</a>
+<a href="[https://github.com/GraceRenewed/PollinatorBE/]"> Visit this Project</a>
 <a href="https://docs.google.com/presentation/d/16FfCE0A8rwL9ZbVFrgeazzTcfgQc6p0My5CoAg6qO0A/edit?usp=sharing"> Project Slide Presentation
 </p>
 
-<h2 id="depolyment"> Depolyed Project</h2>
-Click here to be taken to project
+<h2 id="depolyment"> Deployed API </h2>
 
-<h2 id="layout"> Layout</h2>
+[API Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
 
-<p align="center">
+<h2 id="apiCalls"> API Call Videos </h2>
+ 
+[Postman Video 1](https://www.loom.com/share/c95f3072f3594491beebc460d4db9477?sid=e704af40-61e8-4a0b-9539-51ac5267649d)
 
-<img src="" alt="Random Image" width="400px">
-<img src="" alt="Random Image" width="400px">
-</p>
+[Postman Video 2](https://www.loom.com/share/8890f5913d3641e19bbc55cd2425ebba?sid=12ae9162-ff7f-437e-8d91-7e7ba144b518)
+
+<h2 id="user"> Description of Ideal User </h2>
+
+Any individual who enjoys pollinators and likes plants would be the ideal user. This app would help them support their local pollinator population by allowing the user to plan their flower selections for the flower pots or garden with plants that they feed on. 
 
 <h2 id="technologies">💻 Technologies</h2>
 
@@ -39,9 +42,9 @@ Click here to be taken to project
 - Entity Framework Core 
 - xUnit 
 - Moq 
-- 	Swashbuckle.AspNetCore 
+- Swashbuckle.AspNetCore 
 - Visual Studio 
-- 	Microsoft.NET.Test.Sdk
+- Microsoft.NET.Test.Sdk
 - System.ComponentModel.DataAnnotations 
 - JSON configuration 
 - Postman
@@ -92,10 +95,8 @@ dotnet test
 Check appsettings.json for any required configuration (like connection strings) and update as needed.
 
 <h2 id="apiCalls">📫 Endpoints</h2>
-
- [API Documentation](https://documenter.getpostman.com/view/36650801/2sB2x3msj5)
  
- [Postman Video](https://www.loom.com/share/06bfa7c84f404f33a13ea060cf5a32df?sid=c9baaada-5ae9-4827-b361-40c717fad7a8)
+
 
  <h2 id="unitTest"> Unit Tests</h2>
 
@@ -104,6 +105,21 @@ Check appsettings.json for any required configuration (like connection strings) 
 <h2 id="projboard"> Project Board</h2>
 
 [GitHub Project Board](https://github.com/users/GraceRenewed/projects/6)
+
+<h2 id="colab">🤝 Collaborators</h2>
+
+<p>Special thank you for my classmates in Cohort 28 for all your support!</p>
+<table>
+<tr>
+
+<td align="center">
+<a href="https://github.com/GraceRenewed">
+<img src="https://avatars.githubusercontent.com/u/171828567?v=4" width="100px;" alt="Christina Vieau Profile Picture"/><br>
+<sub>
+<b>Christina Vieau</b>
+</sub>
+</a>
+</td>
 
 <h2 id="contribute">📫 Contribute</h2>
 
